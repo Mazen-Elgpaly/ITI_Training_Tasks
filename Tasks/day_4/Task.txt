@@ -353,7 +353,7 @@ button
 
  Form Attributes 
 
-دي مش Elements، دي Attributes، ودي نقطة مهمة جدًا.
+دي مش Elements، دي Attributes
 
  required
 
