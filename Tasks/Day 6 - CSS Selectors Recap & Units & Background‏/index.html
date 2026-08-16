@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mazen | Personal Profile</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Mazen Mohamed Ali</h1>
+      <span class="job-title">Web Developer</span>
+
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" class="about-section">
+        <img
+          class="profile-image"
+          src="./assets/images/image1.jpeg"
+          alt="Profile picture of Mazen"
+        />
+
+        <h2>About Me</h2>
+
+        <p class="about-text">
+          I am a web developer who enjoys creating websites, learning new
+          technologies, and building useful projects.
+        </p>
+
+        <a class="contact-button" href="#contact"> Contact Me </a>
+      </section>
+
+      <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+
+        <ul class="skills-list">
+          <li class="skill">HTML</li>
+          <li class="skill">CSS</li>
+          <li class="skill">JavaScript</li>
+          <li class="skill">Python</li>
+        </ul>
+
+        <h2>Learning Journey</h2>
+
+        <ol class="learning-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ol>
+
+        <p class="skills-text">
+          I am <strong>passionate</strong> about development,
+          <em>always learning</em>, and <mark>building projects</mark>.
+        </p>
+
+        <div class="overflow-box">
+          Web development is a continuous learning journey. HTML creates the
+          structure of the page, CSS controls its appearance, and JavaScript
+          adds interaction. Practice is the best way to improve programming
+          skills.
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message"
+            required
+          ></textarea>
+
+          <button type="submit" class="contact-button">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Mazen Mohamed</p>
+
+      <a href="https://github.com" target="_blank"> GitHub </a>
+
+      <a href="#about">Back to About</a>
+    </footer>
+  </body>
+</html>

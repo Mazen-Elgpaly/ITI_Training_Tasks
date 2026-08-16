@@ -1,0 +1,215 @@
+:root {
+  --primary-color: #00bcd4;
+  --secondary-color: #7c4dff;
+  --dark-color: #111827;
+  --dark-light: #1e293b;
+  --light-color: #f1f5f9;
+  --white-color: #ffffff;
+  --text-color: #334155;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: var(--dark-color);
+}
+
+.site-header {
+  width: 100%;
+  height: 30vh;
+  background: var(--dark-light);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.site-header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+
+.job-title {
+  display: block;
+  color: #cbd5e1;
+  font-size: 1.2em;
+  cursor: help;
+}
+
+.main-nav {
+  display: block;
+}
+
+.main-nav a {
+  color: var(--white-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+.about-section {
+  display: block;
+  max-width: 750px;
+  min-height: 65vh;
+  background-color: var(--white-color);
+  background-image: url("../assets/images/car2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+/* ================================
+    important 
+================================ */
+
+/* The about heading has a special design,
+   so it must override the general h2 color */
+
+.about-section h2 {
+  color: var(--white-color) !important;
+}
+
+.profile-image {
+  display: block;
+  width: 30vw;
+  max-width: 220px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.about-section p {
+  width: 80%;
+  font-size: 1.1rem;
+}
+
+.about-section > .profile-image {
+  cursor: grab;
+}
+
+p {
+  color: #00ffc9;
+}
+
+.about-text {
+  color: var(--text-color);
+}
+
+#about .about-text {
+  color: var(--white-color);
+}
+
+.contact-button {
+  display: block;
+  width: 180px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.skills-section {
+  display: block;
+  width: 90%;
+  max-width: 750px;
+  min-height: 65vh;
+  background-color: #e0f7fa;
+}
+
+.skills-section h2 {
+  color: var(--secondary-color);
+}
+
+.skills-list,
+.learning-list {
+  display: block;
+  width: 70%;
+  text-align: left;
+}
+
+.skill {
+  cursor: help;
+}
+
+.skill:hover {
+  color: var(--secondary-color);
+}
+
+.skills-text {
+  font-size: 1.1rem;
+}
+
+.overflow-box {
+  display: block;
+  width: 50%;
+  height: 35px;
+  overflow: auto;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  text-align: left;
+}
+
+.contact-section {
+  --section-color: #b6d9ff;
+  text-align: left;
+  display: block;
+  width: 90%;
+  max-width: 750px;
+  min-height: 50vh;
+  background-color: var(--section-color);
+}
+
+.contact-form {
+  display: block;
+  width: 80%;
+}
+
+.contact-form label {
+  display: block;
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  height: 45px;
+  color: var(--text-color);
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+.site-footer {
+  width: 100%;
+  min-height: 20vh;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+.site-footer a {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.site-footer a:hover {
+  color: var(--white-color);
+}
