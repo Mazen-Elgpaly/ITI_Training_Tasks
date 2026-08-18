@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto Slab", serif;
+        font-style: normal;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .Hero nav a:hover {
+        color: #bb9558;
+      }
+      .Hero nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: 20px;
+        font-size: 14px;
+      }
+      .Hero {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        background-image: url(./assets/images/background.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50vh;
+      }
+      .baker-nav {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+      }
+      .image-container {
+        width: 15%;
+      }
+      .image-container img {
+        width: 100%;
+      }
+      .hero-text {
+        font-size: 20px;
+        width: 30%;
+        text-align: center;
+        color: white;
+      }
+      .btn1 {
+        background-color: #bb9558;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 25px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .btn2 {
+        background-color: rgba(0, 0, 0, 0.085);
+        color: white;
+        border: white 1px solid;
+        border-radius: 5px;
+        padding: 15px 25px;
+        cursor: pointer;
+      }
+      .Hero button {
+        transition: all 0.3s ease;
+      }
+      .Hero button:hover {
+        background-color: #574323;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 2rem 5rem;
+      }
+
+      .image-wrapper {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .image-wrapper img {
+        width: 40%;
+      }
+
+      .about-text {
+        display: flex;
+        flex-direction: column;
+        color: #775e39;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="Hero">
+      <div class="baker-nav">
+        <div class="image-container">
+          <img src="./assets/images/logo.png" alt="logo" />
+        </div>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Our Offer</a>
+          <a href="#">Gallery</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+      <div class="hero-text">
+        <p>Welcome to</p>
+        <h1>Family Bakery</h1>
+        <p>
+          We're the biggest, best equipped and most advanced Bakery in the
+          greater Los Angeles area.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn1">Learn More</button>
+          <button class="btn2">Contact Us</button>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="image-wrapper">
+        <img src="./assets/images/bakery.jpg" alt="image" />
+      </div>
+      <div class="about-text">
+        <h2>Who we are?</h2>
+        <p>
+          We have been operating for over 30 years and are Members of The
+          Federation of Master Builders. We work on projects big and small from
+          small residential extensions to full house. We are so happy with this
+          theme. Everyday it make our lives better.
+        </p>
+
+        <p>✔ We care about environment.</p>
+
+        <p>✔ We are trusted by hundreds of clients.</p>
+
+        <p>✔ Social media loves us!</p>
+
+        <p>✔ This list is super easy to create.</p>
+      </div>
+    </section>
+  </body>
+</html>
