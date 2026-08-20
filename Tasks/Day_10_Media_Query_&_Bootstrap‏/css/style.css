@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  font-family: "Segoe UI";
+}
+
+.container {
+  background-color: rgb(235, 235, 235);
+  padding: 50px 0;
+}
+
+.section {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  margin-bottom: 10px;
+}
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.image-wrapper:hover .overlay {
+  opacity: 1;
+}
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 5px;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(90 170 255 / 65%);
+}
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1400px) {
+  .card {
+    flex-basis: 25%;
+  }
+}
+@media (max-width: 992px) {
+  .card {
+    flex-basis: 33.333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    width: 95%;
+  }
+
+  .card {
+    flex-basis: 100%;
+  }
+}
