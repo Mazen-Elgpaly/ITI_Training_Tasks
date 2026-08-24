@@ -1,62 +1,82 @@
-// Task 1
-var PlayerOneChoice = "Rock";
-var PlayerTwoChoice = "scissors";
+isAvailable = true;
+var memberStatus = isAvailable ? "Ready for projects" : "Not available";
+console.log(`${memberStatus}`);
 
-if (PlayerOneChoice === PlayerTwoChoice) {
-  console.log("It's a tie!");
+console.log(`=======================================`);
+
+var x = 50;
+function localScope() {
+  var x = 20;
+  console.log(x);
 }
-if (
-  (PlayerOneChoice === "Rock" && PlayerTwoChoice === "scissors") ||
-  (PlayerOneChoice === "Paper" && PlayerTwoChoice === "Rock") ||
-  (PlayerOneChoice === "scissors" && PlayerTwoChoice === "Paper")
-) {
-  console.log("Player One wins!");
-} else {
-  console.log("Player Two wins!");
+localScope(); // 20
+console.log(x); // 50
+
+console.log(`=======================================`);
+
+function calculateSalary(base, bonus = 0) {
+  return base + bonus;
 }
+calculateSalary(15000, 3000);
 
-console.log("=======================================================");
+console.log(`=======================================`);
 
-// Task 2
-var age = 20;
-var PIvalue = 3.14;
-var name = "Mazen";
-var isStudent = true;
-var emptyValue = null;
-var unassigned;
+const multiply = (a, b) => a * b;
+multiply(4, 5);
 
-var grade = 85;
+console.log(`=======================================`);
 
-if (typeof grade !== "number" || isNaN(grade)) {
-  console.log("Invalid grade: Please enter a number.");
-} else if (grade < 0 || grade > 100) {
-  console.log("Invalid grade: Grade must be between 0 and 100.");
-} else if (grade >= 90) {
-  console.log("Excellent");
-} else if (grade >= 80) {
-  console.log("Good");
-} else if (grade >= 70) {
-  console.log("Average");
-} else if (grade >= 60) {
-  console.log("Pass");
-} else {
-  console.log("Fail");
+var start = 3;
+var end = 15;
+var firstOdd = start % 2 === 0 ? start + 1 : start;
+
+for (var i = firstOdd; i <= end; i += 2) {
+  console.log(i);
 }
 
-console.log("=======================================================");
+console.log(`=======================================`);
 
-// Task 3
-var number = 8;
-if (number > 0) {
-  console.log("Number is positive.");
-} else if (number < 0) {
-  console.log("Number is negative.");
-} else {
-  console.log("Number is zero.");
+var counter = 3;
+while (counter > 0) {
+  console.log(`Countdown: ${counter}`);
+  counter--;
 }
 
-if (number % 2 === 0) {
-  console.log("Number is even.");
-} else {
-  console.log("Number is odd.");
-}
+console.log(`=======================================`);
+
+var step = 5;
+do {
+  console.log(`Step number: ${step}`);
+  step++;
+} while (step < 1);
+
+console.log(`=======================================`);
+
+(function () {
+  var x = 5;
+  var y = 10;
+  console.log(`sum is ${x + y}`);
+})();
+
+console.log(`=======================================`);
+var person = {
+  fullName: `Mazen Mohamed`,
+  age: 22,
+  gender: `Male`,
+  job: `Developer`,
+  salary: 18500,
+  city: `Cairo`,
+  isStudent: true,
+  skills: [`JavaScript`, `HTML`, `CSS`, `React`, `Node.js`],
+  eat: function (meal) {
+    console.log(`Eating ${meal}`);
+  },
+};
+
+console.log(`Primary Skill: ${person.skills[0]}`);
+
+Object.keys(person).forEach((key) => console.log(key));
+console.log(`=====================`);
+Object.values(person).forEach((value) => console.log(value));
+
+console.log(`=======================================`);
