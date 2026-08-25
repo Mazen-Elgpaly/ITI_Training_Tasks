@@ -165,13 +165,13 @@ function testLetScope() {
   }
   // console.log(d); // error (out of  if scope)
   let e = 40;
-  console.log(`let e inside function:`, e);
+  console.log(`let e inside function:${e}`);
 }
 testLetScope();
 // console.log(e); // error (out of function scope)
 
 const PI = 3.14;
-console.log(`let PI:`, PI);
+console.log(`let PI:${PI}`);
 // PI = 3.15; // error
 
 if (true) {
@@ -181,24 +181,25 @@ if (true) {
 // console.log(message); // error (out of  if scope)
 
 let uniqueElement = document.getElementById(`unique`);
-console.log(`getElementById:`, uniqueElement);
+console.log(`getElementById:${uniqueElement}`);
 
 let items = document.getElementsByClassName(`item`);
-console.log(`getElementsByClassName (HTMLCollection):`, items);
-Array.from(items).forEach((item) => console.log(`Item:`, item));
+console.log(`getElementsByClassName (HTMLCollection):${items}`);
+Array.from(items).forEach((item) => console.log(`Item:${items}`));
 
 let divs = document.getElementsByTagName(`div`);
-console.log(`getElementsByTagName div:`, divs);
+console.log(`getElementsByTagName div:${divs}`);
 
 let emailInput = document.getElementsByName(`email`);
-console.log(`getElementsByName email:`, emailInput);
+console.log(`getElementsByName email:${emailInput}`);
 
 let firstItemH3 = document.querySelector(`.item h3`);
-console.log(`querySelector .item h3:`, firstItemH3);
+console.log(`querySelector .item h3: ${firstItemH3}`);
 
 let allH3 = document.querySelectorAll(`.item h3`);
 console.log(`querySelectorAll .item h3:`, allH3);
-allH3.forEach((h3) => console.log(`H3 text:`, h3.textContent));
+
+allH3.forEach((h3) => (h3.style.color = "red"));
 
 console.log(`body:`, document.body);
 console.log(`title:`, document.title);
@@ -206,9 +207,6 @@ console.log(`head:`, document.head);
 console.log(`links:`, document.links);
 console.log(`forms:`, document.forms);
 console.log(`images:`, document.images);
-
-let paragraphs = document.querySelectorAll(`.paragraph-section p`);
-paragraphs.forEach((p) => console.log(`Paragraph:`, p.textContent));
 
 let demoDiv = document.querySelector(`.demo`);
 if (demoDiv) {
