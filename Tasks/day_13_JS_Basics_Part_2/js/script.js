@@ -18,16 +18,16 @@ let car = {
   },
 };
 let carJSON = JSON.stringify(car);
-console.log(`JSON string:`, carJSON);
+console.log(`JSON string:${carJSON}`);
 
 let parsedCar = JSON.parse(carJSON);
-console.log(`Parsed object:`, parsedCar);
+console.log(`Parsed object:${parsedCar}`);
 
 let friends = [`Amr`, `Hady`, `Ziad`, `Ahmed`, `Omar`, `Ali`];
-console.log(`Original array:`, friends);
-console.log(`Length:`, friends.length);
-console.log(`first element: `, friends[0]);
-console.log(`second element: `, friends[1]);
+console.log(`Original array:${friends}`);
+console.log(`Length:${friends.length}`);
+console.log(`first element: ${friends[0]}`);
+console.log(`second element: ${friends[1]} `);
 
 let mixedArray = [`Mostafa`, 23, 15.12, 999999999, true, null, undefined];
 console.log(`Mixed array: ${mixedArray}`);
@@ -39,33 +39,33 @@ for (let i = 0; i < mixedArray.length; i++) {
 let obj1 = { first: `Mohamed`, last: `Hany`, count: 26, isValid: true };
 let obj2 = { message: `Hello User`, title: `Read a book` };
 let arrOfObjects = [obj1, obj2];
-console.log(`Array of objects:`, arrOfObjects);
-console.log(`First object first name:`, arrOfObjects[0].first);
+console.log(`Array of objects:${arrOfObjects}`);
+console.log(`First object first name:${arrOfObjects[0].first}`);
 
 friends.sort();
-console.log(`After sort:`, friends);
+console.log(`After sort:${friends}`);
 
 friends.push(`Mazen`);
 friends.push(`Sayed`, `Youssef`, `Fathy`);
-console.log(`After push:`, friends);
+console.log(`After push:${friends}`);
 
 friends.unshift(`Noura`);
-console.log(`After unshift:`, friends);
+console.log(`After unshift:${friends}`);
 
 let popped = friends.pop();
-console.log(`After pop:`, friends, `Popped item:`, popped);
+console.log(`After pop:${friends} Popped item: ${popped}`);
 
 let shifted = friends.shift();
-console.log(`After shift:`, friends, `Shifted item:`, shifted);
+console.log(`After shift:${friends} Shifted item:${shifted}`);
 
 friends.splice(2, 2, `Fathy`, `Sayed`);
-console.log(`After splice:`, friends);
+console.log(`After splice: ${friends}`);
 
 let sliced = friends.slice(1, 4);
-console.log(`Sliced (1,4):`, sliced);
+console.log(`Sliced (1,4):${sliced}`);
 
 friends.reverse();
-console.log(`After reverse:`, friends);
+console.log(`After reverse:${friends}`);
 
 console.log("Includes `Amr`:", friends.includes(`Amr`));
 
@@ -75,44 +75,43 @@ console.log("Index of `Rowida`:", friends.indexOf(`Rowida`)); // -1
 friends = [`Amr`, `Hady`, `Amr`, `Ahmed`, `Amr`, `Ali`];
 console.log("Last index of `Amr`:", friends.lastIndexOf(`Amr`));
 
-console.log(`Array as string:`, friends.toString());
+console.log(`Array as string:${friends.toString()}`);
 
 let myString = `Web Design & Development and having fun`;
-console.log(`Original string:`, myString);
+console.log(`Original string:${myString}`);
 
-console.log(`charAt(2):`, myString.charAt(2));
-console.log(`at(4):`, myString.at(4));
+console.log(`charAt(2):${myString.charAt(2)}`);
+console.log(`at(4):${myString.at(4)}`);
 
-console.log(`slice(6):`, myString.slice(6));
+console.log(`slice(6):${myString.slice(6)}`);
 
-console.log(`lower:`, myString.toLowerCase());
-console.log(`upper:`, myString.toUpperCase());
+console.log(`lower:${myString.toLowerCase()}`);
+console.log(`upper:${myString.toUpperCase()}`);
 
-console.log(`concat:`, myString.concat(` and learning more...`));
+console.log(`concat: ${myString.concat(` and learning more...`)}`);
 
 let padded = `      Web Design & Development and having fun          `;
-console.log(`trimEnd:`, padded.trimEnd());
-console.log(`trimStart:`, padded.trimStart());
-console.log(`trim:`, padded.trim());
+console.log(`trimEnd:${padded.trimEnd()}`);
+console.log(`trimStart:${padded.trimStart()}`);
+console.log(`trim: ${padded.trim()}`);
 
 let words = myString.split(` `);
-console.log(`Split by space:`, words);
+console.log(`Split by space:${words}`);
 
 let chained = myString.split(` `).slice(0, 4).join(` `).trim();
-console.log(`Chained result:`, chained);
+console.log(`Chained result:${chained}`);
 
 let searchTerm = `SaMsUnG`;
 console.log(
-  "Search `NG` case-insensitive:",
-  searchTerm.toLowerCase().includes(`ng`.toLowerCase()),
+  `Search "NG" case-insensitive:${searchTerm.toLowerCase().includes("ng".toLowerCase())}`,
 );
 
 console.log(
-  "Replace first `and`:",
+  `Replace first "and":`,
   `web design and development and fun`.replace(`and`, `&`),
 );
 console.log(
-  "Replace all `and`:",
+  `Replace all "and":`,
   `web design and development and fun`.replaceAll(`and`, `&`),
 );
 
@@ -120,13 +119,13 @@ console.log(`padEnd:`, `100000`.padEnd(10, `X`));
 console.log(`padStart:`, `100000`.padStart(10, `X`));
 
 var x = 1;
-console.log(`var x initial:`, x);
+console.log(`var x initial:`);
 var x = 5; // no error
-console.log(`var x after redeclaration:`, x);
+console.log(`var x after redeclaration:${x}`);
 
-console.log(`hoistedVar before declaration:`, hoistedVar); // undefined
+console.log(`hoistedVar before declaration:${hoistedVar}`); // undefined
 var hoistedVar = `Ahmed`;
-console.log(`hoistedVar after declaration:`, hoistedVar);
+console.log(`hoistedVar after declaration:${hoistedVar}`);
 
 var y = 10;
 if (y == 10) {
@@ -139,7 +138,7 @@ function testVarScope() {
   if (true) {
     var z = 50;
   }
-  console.log(`var z inside function:`, z);
+  console.log(`var z inside function:${z}`);
 }
 testVarScope();
 // console.log(z); // error (out of scope)
@@ -147,18 +146,18 @@ testVarScope();
 let a = 1;
 // let a = 2; // error of repeat declaration of the same variable name
 a = 2;
-console.log(`let a after reassignment:`, a);
+console.log(`let a after reassignment:${a}`);
 
 // console.log(b); // error of using before intialization
 let b = 5;
-console.log(`let b after declaration:`, b);
+console.log(`let b after declaration:${b}`);
 
 let c = 10;
 if (c == 10) {
   let c = 20;
-  console.log(`let c inside if:`, c);
+  console.log(`let c inside if:${c}`);
 }
-console.log(`let c outside if:`, c);
+console.log(`let c outside if:${c}`);
 
 function testLetScope() {
   if (true) {
