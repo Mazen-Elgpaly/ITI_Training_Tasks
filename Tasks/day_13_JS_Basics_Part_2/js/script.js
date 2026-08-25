@@ -295,7 +295,7 @@ document.addEventListener(`keydown`, (e) => {
   }
 });
 
-let inputField = document.querySelector(`.demo`);
+let inputField = document.querySelector(`.Inpt`);
 if (inputField) {
   inputField.addEventListener(`focus`, () => console.log(`Input focused`));
   inputField.addEventListener(`blur`, () => console.log(`Input lost focus`));
