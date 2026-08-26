@@ -1,0 +1,654 @@
+# 🚀 JavaScript ES6 Challenge #2 (Bonus)
+
+# Scinario
+
+إنت شغال في شركة بتعمل Dashboard لإدارة الموظفين.
+
+عندك الداتا دي:
+
+```js
+const employees = [
+  {
+    id: 1,
+    name: "Ahmed",
+    age: 22,
+    salary: 6000,
+    department: "IT",
+    active: true
+  },
+  {
+    id: 2,
+    name: "Sara",
+    age: 27,
+    salary: 8500,
+    department: "HR",
+    active: true
+  },
+  {
+    id: 3,
+    name: "Ali",
+    age: 20,
+    salary: 4500,
+    department: "IT",
+    active: false
+  },
+  {
+    id: 4,
+    name: "Mona",
+    age: 30,
+    salary: 10000,
+    department: "Finance",
+    active: true
+  },
+  {
+    id: 5,
+    name: "Omar",
+    age: 24,
+    salary: 7000,
+    department: "Marketing",
+    active: false
+  },
+  {
+    id: 6,
+    name: "Youssef",
+    age: 29,
+    salary: 12000,
+    department: "IT",
+    active: true
+  }
+];
+```
+
+---
+
+# Part 1 - Loops
+
+### المطلوب
+
+### 1
+
+اطبع أسماء كل الموظفين باستخدام
+
+- for
+- for...of
+- forEach
+
+for (let i = 0; i < employees.length; i++) {
+  console.log(employees[i].name);
+}
+
+for (const employee of employees) {
+  console.log(employee.name);
+}
+
+employees.forEach((employee) => {
+  console.log(employee.name);
+});
+---
+
+### 2
+
+اطبع الـ Index باستخدام for...in
+
+for (const index in employees) {
+  console.log(index);
+}
+
+---
+
+### 3
+
+اطبع الموظفين النشطين (active = true) فقط باستخدام Loop عادية.
+
+for (let i = 0; i < employees.length; i++) {
+  if (employees[i].active) {
+    console.log(employees[i]);
+  }
+}
+
+---
+
+# Part 2 - ES6
+
+## المطلوب
+
+### 1
+
+حوّل الدالة دي لـ Arrow Function
+
+```js
+function welcome(name){
+   return "Welcome " + name;
+}
+```
+const welcome = (name) => `Welcome ${name}`;
+---
+
+### 2
+
+استخدم Destructuring
+
+```js
+const employee = employees[0];
+```
+
+واطبع
+
+- name
+- salary
+
+const employee = employees[0];
+
+const { name, salary } = employee;
+
+console.log(name);
+console.log(salary);
+
+//=========== or without using employees[0]===========\\
+
+const [{ name, salary }] = employees;
+
+console.log(name);
+console.log(salary);
+
+---
+
+### 3
+
+اعمل نسخة جديدة من الـ employee باستخدام Spread Operator وزود فيها
+
+```js
+country:"Egypt"
+```
+const employee = employees[0];
+
+const newEmployee = {
+  ...employee,
+  country: "Egypt"
+};
+
+console.log(newEmployee);
+
+---
+
+### 4
+
+استخدم Template Literal واطبع
+
+```
+Ahmed works in IT and earns 6000
+```
+const employee = employees[0];
+
+console.log(
+  `${employee.name} works in ${employee.department} and earns ${employee.salary}`
+);
+
+---
+
+# Part 3 - map()
+
+### 1
+
+اعمل Array فيها أسماء الموظفين بس.
+
+const names = employees.map((employee) => {
+  return employee.name;
+});
+
+console.log(names);
+
+---
+
+### 2
+
+اعمل Array فيها الرواتب فقط.
+
+const salaries = employees.map((employee) => {
+  return employee.salary;
+});
+
+console.log(salaries);
+
+---
+
+### 3
+
+اعمل Array بالشكل ده
+
+```js
+[
+ "Ahmed (IT)",
+ "Sara (HR)"
+]
+```
+const result = employees.map((employee) => {
+  return `${employee.name} (${employee.department})`;
+});
+
+console.log(result);
+
+---
+
+### 4
+
+اعمل Array جديدة تزود مرتب كل موظف 1000 جنيه.
+
+> بدون تعديل الـ Array الأصلية.
+
+const newEmployees = employees.map((employee) => {
+  return {
+    ...employee,
+    salary: employee.salary + 1000
+  };
+});
+
+console.log(newEmployees);
+
+---
+
+# Part 4 - filter()
+
+### طلع
+
+1. الموظفين اللي مرتباتهم أكبر من 7000.
+
+const result = employees.filter((employee) => {
+  return employee.salary > 7000;
+});
+
+console.log(result);
+
+2. الموظفين اللي في قسم IT.
+
+const result = employees.filter((employee) => {
+  return employee.department === "IT";
+});
+
+console.log(result);
+
+3. الموظفين النشطين.
+
+const result = employees.filter((employee) => {
+  return employee.active === true;
+});
+
+console.log(result);
+
+4. الموظفين سنهم أقل من 25.
+
+const result = employees.filter((employee) => {
+  return employee.age < 25;
+});
+
+console.log(result);
+
+5. الموظفين اللي في قسم IT ومرتبهم أكبر من 5000.
+
+const result = employees.filter((employee) => {
+  return employee.department === "IT" && employee.salary > 5000;
+});
+
+console.log(result);
+
+---
+
+# Part 5 - find()
+
+### هات
+
+1. أول موظف مرتبه أكبر من 9000.
+
+const employee = employees.find((employee) => {
+  return employee.salary > 9000;
+});
+
+console.log(employee);
+
+2. أول موظف في قسم HR.
+
+const employee = employees.find((employee) => {
+  return employee.department === "HR";
+});
+
+console.log(employee);
+
+3. أول موظف غير نشط.
+
+const employee = employees.find((employee) => {
+  return employee.active === false;
+});
+
+console.log(employee);
+
+4. جرّب تجيب موظف الـ id بتاعه 100.
+
+const employee = employees.find((employee) => {
+  return employee.id === 100;
+});
+
+console.log(employee);
+
+إيه اللي هيحصل؟
+undefined عشان مفيش موظف بالأيدي ده 
+
+---
+
+# Part 6 - Mixed Challenge
+
+## المطلوب
+
+اعمل النتائج دي بدون استخدام Loop عادية.
+
+---
+
+### 1
+
+اعمل Array فيها أسماء الموظفين النشطين فقط.
+
+const activeNames = employees
+  .filter((employee) => employee.active)
+  .map((employee) => employee.name);
+
+console.log(activeNames);
+
+---
+
+### 2
+
+اعمل Array فيها أسماء موظفين الـ IT فقط.
+
+const itNames = employees
+  .filter((employee) => employee.department === "IT")
+  .map((employee) => employee.name);
+
+console.log(itNames);
+
+---
+
+### 3
+
+اعمل Array فيها أسماء الموظفين اللي مرتبهم أكبر من 7000.
+
+const names = employees
+  .filter((employee) => employee.salary > 7000)
+  .map((employee) => employee.name);
+
+console.log(names);
+
+---
+
+### 4
+
+اعمل Array بالشكل ده
+
+```js
+[
+{
+   employee:"Ahmed",
+   bonus:600
+},
+...
+]
+```
+
+> البونص = 10% من المرتب.
+
+const bonuses = employees.map((employee) => {
+  return {
+    employee: employee.name,
+    bonus: employee.salary * 0.10
+  };
+});
+
+console.log(bonuses);
+
+---
+
+### 5
+
+اعمل Array فيها أول حرف من اسم كل موظف.
+
+مثال
+
+```js
+["A","S","A","M"]
+```
+const firstLetters = employees.map((employee) => {
+  return employee.name[0];
+});
+
+console.log(firstLetters);
+
+---
+
+# Part 7 - Logical Thninking
+
+### عندك
+
+```js
+const numbers = [5,12,8,20,15,30,3,40];
+```
+
+---
+
+### المطلوب
+
+1. طلع الأرقام الأكبر من 10.
+
+const result = numbers.filter((num) => {
+  return num > 10;
+});
+
+console.log(result);
+
+2. اضرب كل رقم ×2.
+
+const result = numbers.map((num) => {
+  return num * 2;
+});
+
+console.log(result);
+
+3. هات أول رقم أكبر من 25.
+
+const result = numbers.find((num) => {
+  return num > 25;
+});
+
+console.log(result);
+
+4. اطبع كل الأرقام.
+
+numbers.forEach((num) => {
+  console.log(num);
+});
+
+5. اعمل Array فيها String بالشكل
+
+```
+Number is 5
+Number is 12
+```
+const result = numbers.map((num) => {
+  return `Number is ${num}`;
+});
+
+console.log(result);
+---
+
+# Part 8 - Object Challenge
+
+عندك
+
+```js
+const product = {
+    id:1,
+    title:"Laptop",
+    price:25000,
+    category:"Electronics"
+}
+```
+---
+
+### المطلوب
+
+1. اطبع كل الـ Keys باستخدام for...in.
+
+for (const key in product) {
+  console.log(key);
+}
+---
+
+### 2
+
+اطبع كل الـ Values.
+for (const key in product) {
+  console.log(product[key]);
+}
+---
+
+### 3
+
+اعمل Object جديد وضيف
+
+```js
+stock:15
+```
+const newProduct = {
+  ...product,
+  stock: 15
+};
+
+console.log(newProduct);
+---
+
+### 4
+
+استخدم Destructuring.
+const { id, title, price, category } = product;
+
+console.log(id);
+console.log(title);
+console.log(price);
+console.log(category);
+---
+
+# Part 9 - Mini Dashboard
+
+اعمل Function اسمها
+
+```js
+dashboard()
+```
+
+لما تتنادى تطبع بالشكل ده
+
+```
+Total Employees : 6
+
+Active Employees : ؟
+
+Inactive Employees : ؟
+
+IT Employees : ؟
+
+Highest Salary : ؟
+
+First HR Employee : ؟
+
+Employee Names :
+
+Ahmed
+Sara
+Ali
+...
+```
+
+function dashboard() {
+  const activeEmployees = employees.filter((employee) => employee.active);
+
+  const inactiveEmployees = employees.filter((employee) => !employee.active);
+
+  const itEmployees = employees.filter((employee) => {
+    return employee.department === "IT";
+  });
+
+  const highestSalary = Math.max(
+    ...employees.map((employee) => employee.salary)
+  );
+
+  const firstHrEmployee = employees.find((employee) => {
+    return employee.department === "HR";
+  });
+
+  const employeeNames = employees.map((employee) => employee.name);
+
+  console.log(`Total Employees : ${employees.length}`);
+
+  console.log(`Active Employees : ${activeEmployees.length}`);
+
+  console.log(`Inactive Employees : ${inactiveEmployees.length}`);
+
+  console.log(`IT Employees : ${itEmployees.length}`);
+
+  console.log(`Highest Salary : ${highestSalary}`);
+
+  console.log(`First HR Employee : ${firstHrEmployee.name}`);
+
+  console.log("Employee Names :");
+
+  employeeNames.forEach((name) => {
+    console.log(name);
+  });
+}
+
+dashboard();
+
+---
+
+# Bonus
+
+لو تعرف `reduce()`
+
+بدون Loop عادية احسب
+
+### 1
+
+إجمالي المرتبات.
+const totalSalary = employees.reduce((total, employee) => {
+  return total + employee.salary;
+}, 0);
+
+console.log(totalSalary);
+---
+
+### 2
+
+متوسط المرتبات.
+const averageSalary = employees.reduce((total, employee) => {
+  return total + employee.salary;
+}, 0) / employees.length;
+
+console.log(averageSalary);
+---
+
+### 3
+
+أعلى مرتب.
+const highestSalary = employees.reduce((highest, employee) => {
+  return employee.salary > highest ? employee.salary : highest;
+}, 0);
+
+console.log(highestSalary);
+---
+
+### 4
+
+عدد الموظفين النشطين.
+const activeCount = employees.reduce((count, employee) => {
+  return employee.active ? count + 1 : count;
+}, 0);
+
+console.log(activeCount);
+---
