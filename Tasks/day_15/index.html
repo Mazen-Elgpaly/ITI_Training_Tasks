@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background: #f4f5f7;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 700px;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .projects {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .project {
+        flex: 1;
+        padding: 30px 20px;
+        background: white;
+        border-radius: 15px;
+        text-decoration: none;
+        color: #222;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: 0.2s;
+      }
+
+      .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      }
+
+      .project h2 {
+        margin-bottom: 10px;
+      }
+
+      .project span {
+        color: #666;
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        .projects {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Day 15 Tasks</h1>
+
+      <p>Select a Task to open</p>
+
+      <div class="projects">
+        <a class="project" href="./ToDo_App_Task/">
+          <h2>ToDo App Task</h2>
+          <span>Open Project</span>
+        </a>
+
+        <a class="project" href="./forkify_API_Task/">
+          <h2>forkify API Task</h2>
+          <span>Open Project</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
+    <title>ToDo App</title>
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <div>
+        <h1>ToDo App</h1>
+        <p>Manage your tasks and track your progress</p>
+      </div>
+      <button class="open-add-task btn">+ Add Task</button>
+    </header>
+    <div class="wrapper">
+      <section class="search-section">
+        <input
+          class="search-input"
+          type="search"
+          placeholder="Search tasks..."
+        />
+        <select id="filterSelect">
+          <option value="all">All Tasks</option>
+          <option value="not-started">Not Started</option>
+          <option value="in-progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+      </section>
+      <section class="tasks-cards">
+        <div class="not-started cardsec">
+          <div class="cards-sec-header">
+            <h2>Not started</h2>
+            <span class="tasks-count">0</span>
+          </div>
+          <div class="cards-sec-body"></div>
+        </div>
+        <div class="in-progress cardsec">
+          <div class="cards-sec-header">
+            <h2>In Progress</h2>
+            <span class="tasks-count">0</span>
+          </div>
+          <div class="cards-sec-body"></div>
+        </div>
+        <div class="completed cardsec">
+          <div class="cards-sec-header">
+            <h2>Completed</h2>
+            <span class="tasks-count">0</span>
+          </div>
+          <div class="cards-sec-body"></div>
+        </div>
+      </section>
+    </div>
+    <div class="add-task-modal modal">
+      <div class="modal-header">
+        <h2>Add Task</h2>
+        <button class="close-modal">x</button>
+      </div>
+      <div class="modal-body">
+        <input class="task-title" type="text" placeholder="Task title" />
+        <div class="add-task-stages">
+          <input class="stage-name" type="text" placeholder="Stage" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="add-stage-input btn">+ Add Stage</button>
+        <button class="create-task btn">Create Task</button>
+      </div>
+    </div>
+    <div class="edit-task-modal modal">
+      <div class="modal-header">
+        <h2>Edit Task</h2>
+        <button class="close-modal">x</button>
+      </div>
+      <div class="modal-body">
+        <input class="edit-task-title" type="text" placeholder="Task title" />
+      </div>
+      <div class="modal-footer">
+        <button class="save-edit-task btn">Save</button>
+      </div>
+    </div>
+    <div class="add-stage-modal modal">
+      <div class="modal-header">
+        <h2>Add Stage</h2>
+        <button class="close-modal">x</button>
+      </div>
+      <div class="modal-body">
+        <input class="new-stage-name" type="text" placeholder="Stage" />
+      </div>
+      <div class="modal-footer">
+        <button class="save-new-stage btn">Add Stage</button>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
